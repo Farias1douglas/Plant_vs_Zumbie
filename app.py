@@ -25,5 +25,11 @@ migrate = Migrate(app, db)
 def index():
     return render_template('login.html')
 
+#brains...#
+@app.route('/recebedados', methods=['POST'])
+def recebedados():
+     return print('ola mundo')
+
+#lingua do dave maluco#
 if __name__ == '__main__':
     app.run(debug=True)
