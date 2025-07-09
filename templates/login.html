@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-center">
+        <div class=" text-start d-inline-flex p-5 justify-content-md-center rounded-5 custom-shadow" style="background-color:#cfcfcf">   
+            <form action="{{url_for('recebedados')}}" method="post">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" name="nome" required><br/>
+                 <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" name="email" required><br/>
+                <label class="form-label">Senha</label>
+                <input type="password" class="form-control" name="senha" required><br/>
+                <input type="checkbox" class="form-check-input" name="idade" required>
+                <label class="form-check-label">Termos de uso</label><br/>
+                <button type="submit" class="btn">Registra-se</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

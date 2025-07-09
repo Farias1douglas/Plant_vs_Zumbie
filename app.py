@@ -20,5 +20,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 
+#the zombies are coming...#
+@app.route('/')
+def index():
+    return render_template('login.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
