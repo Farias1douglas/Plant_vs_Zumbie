@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request
-import json
-from flask import flash, redirect
+from flask import Flask, render_template, request, redirect
+from flask import flash
 from utils import db
 import os
 from flask_migrate import Migrate
@@ -23,8 +22,10 @@ migrate = Migrate(app, db)
 #the zombies are coming...#
 @app.route('/')
 def index():
+    return render_template('home.html')
+@app.route('/login')
+def login():
     return render_template('login.html')
-
 #brains...#
 @app.route('/recebedados', methods=['POST'])
 def recebedados():
