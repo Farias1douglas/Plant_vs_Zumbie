@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<body>
+    <div class="d-flex flex-column align-items-stretch p-4" style="background-color: rgb(48, 46, 36);">
+        <p>
+            Dias com névoa são diferentes de todos os outros. Os zumbis são mais trapaceiros e tentam se aproveitar da falta de visão para ataques sujos. As plantas, é claro, não deixam barato e retrucam correspondendo aos ataques.
+        </p>
+        <img src="/static/imagens/cenarios/NÉVOA.jpg" alt=""><br>
+        <h3>
+            Estas são as plantas que você encontrará no jardim durante o dia:
+        </h3>
+        <img src="/static/imagens/plantas névoa.png" alt=""><br>
+            <h3>Descrição das plantas:</h3>
+        <ul>
+            <li>Plampão: ilumina ao redor de onde foi posicionado.</li>
+            <li>Cacto: dispara espinhos, além de poder esticar sua altura para cima se necessário.</li>
+            <li>Turbinada: assopra parte da névoa por um curto período de tempo.</li>
+            <li>Bidisparervilha: atira ervilhas pela frente e por trás.</li>
+            <li>Carambola: atira para múltiplas direções.</li>
+            <li>Abóbora: pode proteger as plantas posicionadas dentro dela.</li>
+            <li>Imãgumelo: capaz de puxar os artifícios metálicos que desejar.</li>
+        </ul>
+        <h3> Estes são os zumbis que aparecem</h3>
+        <img src="/static/imagens/zumbies/zumbis névoa.png" alt=""><br>
+        <h3>Descrição dos zumbis:</h3>
+        <ul>
+            <li>Surpresa: carrega uma caixa com explosivos.</li>
+            <li>Balão: flutua sob as plantas.</li>
+            <li>Escavador: escava por debaixo das plantas para atacá-las por trás.</li>
+            <li>Pula-pula: usa um pula pula portátil para saltar sob as plantas.</li>
+        </ul>
+    </div>
+</body>
+{% endblock %}

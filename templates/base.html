@@ -9,24 +9,30 @@
 </head>
 <div class="conteiner">
   <div class="conteiner">
-    <body style="color:whitesmoke;background-color:#161616; font-family:Verdana;">
+    <body style="color:whitesmoke; font-family:Verdana; background-image:url('/static/imagens/fundo_p.jpg')">
       <ul class="nav p-1 fs-5 navbar-expand-lg justify-content-end" style="background-color: #1a2718;">
         <li class="nav-item d-flex flex-grow-1">
           <a href="/"  type="button" class="nav-link" style="opacity: 100%; color: aliceblue;"><img src="/static/imagens/icon.png" width="70" height="auto">Guia de Jardineiro</a>
         </li> 
         <li class="nav-item">
-          <a href="/login" type="button" class="nav-link" style="opacity: 100%; color: aliceblue;">Perfil</a>
+          <a href="/faleconosco" type="button" class="nav-link" style="opacity: 100%; color: aliceblue;">Fale Conosco</a>
         </li>
         <li class= "nav-item dropdown">
           <a type="button" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="opacity: 100%; color:aliceblue">
             Perfil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Comentarios</a></li>
-            <li><a class="dropdown-item" href="#">Sair</a></li>
+            <li><a class="dropdown-item" href="#">
+              {% if current_user.is_authenticated %}
+                {{current_user.nome}}
+              {% else %}
+                Convidado
+              {% endif %} 
+            </a></li>
+            <li><a class="dropdown-item" href="/comentarios">Comentarios</a></li>
+            <li><a class="dropdown-item" href="/logout">Sair</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Fale Conosco</a></li>
+            <li><a class="dropdown-item" href="/faleconosco">Fale Conosco</a></li>
           </ul>
         </li>
       </ul>
@@ -36,9 +42,9 @@
               Dia
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Jardim</a></li>
-              <li><a class="dropdown-item" href="#">Piscina</a></li>
-              <li><a class="dropdown-item" href="#">Telhado</a></li>
+              <li><a class="dropdown-item" href="/jardimdia">Jardim</a></li>
+              <li><a class="dropdown-item" href="/piscinadia">Piscina</a></li>
+              <li><a class="dropdown-item" href="/telhadodia">Telhado</a></li>
             </ul>
         </li>
         <li class= "nav-item dropdown">
@@ -46,18 +52,18 @@
               Noite
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Jardim</a></li>
-              <li><a class="dropdown-item" href="#">Piscina</a></li>
-              <li><a class="dropdown-item" href="#">Telhado</a></li>
+              <li><a class="dropdown-item" href="/jardimnoite">Jardim</a></li>
+              <li><a class="dropdown-item" href="/piscinanoite">Piscina</a></li>
+              <li><a class="dropdown-item" href="/telhadonoite">Telhado</a></li>
             </ul>
         </li>
         <li class= "nav-item">
-            <a type="button" class="nav-link" style="opacity: 100%; color:aliceblue">
+            <a href="/nevoa"type="button" class="nav-link" style="opacity: 100%; color:aliceblue">
               Nevoa
             </a>
         </li>
         <li class="nav-item">
-          <a href="/items" type="button" class="nav-link" style="opacity: 100%; color: aliceblue;">
+          <a href="/itens" type="button" class="nav-link" style="opacity: 100%; color: aliceblue;">
             Itens
           </a>
         </li>
